@@ -56,6 +56,12 @@ def main():
     joblib.dump(y_train, os.path.join(args.output_train_path, "y_train.joblib"))
     joblib.dump(X_test,  os.path.join(args.output_test_path, "X_test.joblib"))
     joblib.dump(y_test,  os.path.join(args.output_test_path, "y_test.joblib"))
+    
+    X_train.to_csv(os.path.join(args.output_train_path, "X_train.csv"), index=False)
+    y_train.to_csv(os.path.join(args.output_train_path, "y_train.csv"), index=False)
+    X_test.to_csv(os.path.join(args.output_test_path, "X_test.csv"), index=False)
+    y_test.to_csv(os.path.join(args.output_test_path, "y_test.csv"), index=False)
+
 
     print("Preprocessing and saving complete.")
 
